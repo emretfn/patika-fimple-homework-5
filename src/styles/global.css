@@ -1,0 +1,61 @@
+:root {
+  --bg-gray: rgb(234, 236, 239);
+  --muted-text: rgb(147, 153, 162);
+
+  --rounded-lg: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+html,
+body,
+#root,
+.main {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  padding: 2rem;
+}
+
+.app {
+  display: grid;
+  grid-template-areas:
+    "mainWeather mainWeather weeklyWeather"
+    "todaysWeather todaysWeather weeklyWeather"
+    "airConditions airConditions weeklyWeather";
+  gap: 2rem;
+  height: 100%;
+}
+
+.searchInput {
+  height: 3.75rem;
+  width: 66%;
+}
+
+.title-xl {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.title-l {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 3rem;
+}
+
+.subtitle {
+  color: var(--muted-text);
+}
