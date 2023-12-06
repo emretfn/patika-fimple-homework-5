@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .card > p:first-child {
@@ -37,7 +37,9 @@
   border-radius: 2px;
 }
 
-.card > img {
-  aspect-ratio: 1;
-  width: 5rem;
+.icon {
+  font-size: 3rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }

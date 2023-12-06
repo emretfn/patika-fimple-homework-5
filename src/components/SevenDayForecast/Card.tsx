@@ -1,20 +1,20 @@
 import styles from "./styles.module.css";
+import { WeatherIcon } from "weather-react-icons";
 
 interface CardProps {
   day: string;
-  icon: string;
-  low: string;
-  high: string;
+  icon: number;
+  low: number;
+  high: number;
 }
 
 export default function Card({ day, icon, low, high }: CardProps) {
   return (
     <div className={styles.card}>
       <p>{day}</p>
-      <img
-        src="https://assets.api.uizard.io/api/cdn/stream/c6d4b268-90a7-459e-8071-e8c1a2cd68b5.png"
-        alt={icon}
-      />
+      <div className={styles.icon}>
+        <WeatherIcon name="owm" iconId={icon} />
+      </div>
       <p>
         <span>{high}</span> / <span>{low}</span>
       </p>
