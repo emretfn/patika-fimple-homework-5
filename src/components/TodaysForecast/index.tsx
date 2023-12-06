@@ -1,3 +1,4 @@
+import Card from "./Card";
 import styles from "./styles.module.css";
 
 export default function TodaysForecast() {
@@ -5,54 +6,12 @@ export default function TodaysForecast() {
     <div className={styles.container}>
       <p>TODAY'S FORECAST</p>
       <div className={styles.cardContainer}>
-        <div className={styles.card}>
-          <p>12:00</p>
-          <img
-            src="https://assets.api.uizard.io/api/cdn/stream/7ecc894b-3d06-44b0-af31-63aff6c41443.png"
-            alt="weather icon"
-          />
-          <p>30°</p>
-        </div>
-        <div className={styles.card}>
-          <p>12:00</p>
-          <img
-            src="https://assets.api.uizard.io/api/cdn/stream/7ecc894b-3d06-44b0-af31-63aff6c41443.png"
-            alt="weather icon"
-          />
-          <p>30°</p>
-        </div>
-        <div className={styles.card}>
-          <p>12:00</p>
-          <img
-            src="https://assets.api.uizard.io/api/cdn/stream/7ecc894b-3d06-44b0-af31-63aff6c41443.png"
-            alt="weather icon"
-          />
-          <p>30°</p>
-        </div>
-        <div className={styles.card}>
-          <p>12:00</p>
-          <img
-            src="https://assets.api.uizard.io/api/cdn/stream/7ecc894b-3d06-44b0-af31-63aff6c41443.png"
-            alt="weather icon"
-          />
-          <p>30°</p>
-        </div>
-        <div className={styles.card}>
-          <p>12:00</p>
-          <img
-            src="https://assets.api.uizard.io/api/cdn/stream/7ecc894b-3d06-44b0-af31-63aff6c41443.png"
-            alt="weather icon"
-          />
-          <p>30°</p>
-        </div>
-        <div className={styles.card}>
-          <p>12:00</p>
-          <img
-            src="https://assets.api.uizard.io/api/cdn/stream/7ecc894b-3d06-44b0-af31-63aff6c41443.png"
-            alt="weather icon"
-          />
-          <p>30°</p>
-        </div>
+        <Card time="09:00" temperature="30" icon="test" />
+        <Card time="12:00" temperature="20" icon="test" />
+        <Card time="15:00" temperature="25" icon="test" />
+        <Card time="18:00" temperature="32" icon="test" />
+        <Card time="21:00" temperature="27" icon="test" />
+        <Card time="24:00" temperature="30" icon="test" />
       </div>
     </div>
   );
