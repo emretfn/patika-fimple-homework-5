@@ -1,0 +1,43 @@
+.container {
+  grid-area: weeklyWeather;
+  background-color: var(--bg-gray);
+  border-radius: var(--rounded-lg);
+  padding: 2rem;
+}
+
+.container > p {
+  color: var(--muted-text);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card > p:first-child {
+  color: var(--muted-text);
+  font-weight: 500;
+}
+
+.card > p:last-child > span:first-child {
+  font-weight: 700;
+}
+
+.card:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.card > img {
+  aspect-ratio: 1;
+  width: 5rem;
+}

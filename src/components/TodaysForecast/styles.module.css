@@ -30,7 +30,7 @@
 }
 
 .card:not(:last-child) {
-  border-right: 1px solid rgb(221, 224, 228);
+  border-right: 1px solid var(--border);
   border-radius: 2px;
 }
 

@@ -1,6 +1,7 @@
 :root {
   --bg-gray: rgb(234, 236, 239);
   --muted-text: rgb(147, 153, 162);
+  --border: rgb(221, 224, 228);
 
   --rounded-lg: 24px;
 }
