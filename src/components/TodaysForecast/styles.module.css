@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  width: 100%;
+  height: 100%;
+  grid-area: todaysWeather;
+  padding: 2rem;
+  background-color: var(--bg-gray);
+  border-radius: var(--rounded-lg);
+}
+
+.container > p {
+  color: var(--muted-text);
+  font-weight: 500;
+}
+
+.cardContainer {
+  display: flex;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card:not(:last-child) {
+  border-right: 1px solid rgb(221, 224, 228);
+  border-radius: 2px;
+}
+
+.card > img {
+  aspect-ratio: 1;
+  width: 6rem;
+}
+
+.card > p:first-child {
+  color: var(--muted-text);
+  font-weight: 700;
+}
+
+.card > p:last-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
