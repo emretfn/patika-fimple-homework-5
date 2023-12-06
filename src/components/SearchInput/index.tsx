@@ -6,6 +6,7 @@ export default function SearchInput() {
   const [searchQuery, setSearchQuery] = useState("");
   const { getCurrentWeather } = useWeather();
 
+  //Fetch current weather on form submit
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await getCurrentWeather(searchQuery);

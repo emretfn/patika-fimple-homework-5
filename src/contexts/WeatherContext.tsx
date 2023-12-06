@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { Forecast, Weather } from "../lib/types";
 import { API_KEY, BASE_API_URL } from "../lib/config";
 
+//Context Type
 interface Context {
   getCurrentWeather: (searchQuery: string) => void;
   weather: Weather | null;
@@ -12,19 +13,24 @@ interface Context {
 export const WeatherContext = createContext<Context>({} as Context);
 
 export const WeatherProvider = ({ children }: { children: React.ReactNode }) => {
+  //Weather State for current weather
   const [weather, setWeather] = useState<Weather | null>(null);
+  //Forecast State for 7 day forecast
   const [forecast, setForecast] = useState<Forecast[] | null>(null);
 
+  //Fetch current weather and forecast on initial render
   useEffect(() => {
     getCurrentWeather("Konya");
   }, []);
 
+  //Fetch forecast when weather changes
   useEffect(() => {
     if (weather) {
       getForecast(weather.coords.lat, weather.coords.lon);
     }
   }, [weather]);
 
+  //Fetch current weather and set state
   const getCurrentWeather = async (searchQuery: string) => {
     try {
       const res = await fetch(
@@ -57,6 +63,7 @@ export const WeatherProvider = ({ children }: { children: React.ReactNode }) => 
     }
   };
 
+  //Fetch forecast and set state
   const getForecast = async (lat: number, lon: number) => {
     try {
       const res = await fetch(
@@ -74,6 +81,7 @@ export const WeatherProvider = ({ children }: { children: React.ReactNode }) => 
     }
   };
 
+  //Array of days for forecast
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return (
@@ -84,15 +92,6 @@ export const WeatherProvider = ({ children }: { children: React.ReactNode }) => 
         forecast,
         days,
       }}
-      //   value={{
-      //     weather,
-      //     setWeather,
-      //     forecast,
-      //     setForecast,
-      //     getCurrentWeather,
-      //     forecastFetch,
-      //     days
-      //   }}
     >
       {children}
     </WeatherContext.Provider>
