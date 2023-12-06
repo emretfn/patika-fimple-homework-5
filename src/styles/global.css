@@ -25,7 +25,7 @@ body,
 .main {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 1rem;
   padding: 2rem;
 }
 
@@ -35,7 +35,9 @@ body,
     "mainWeather mainWeather weeklyWeather"
     "todaysWeather todaysWeather weeklyWeather"
     "airConditions airConditions weeklyWeather";
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
   height: 100%;
 }
 

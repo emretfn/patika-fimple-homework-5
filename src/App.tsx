@@ -1,3 +1,4 @@
+import AirConditions from "./components/AirConditions";
 import MainWeather from "./components/MainWeather";
 import TodaysForecast from "./components/TodaysForecast";
 
@@ -8,6 +9,7 @@ function App() {
       <div className="app">
         <MainWeather />
         <TodaysForecast />
+        <AirConditions />
       </div>
     </main>
   );

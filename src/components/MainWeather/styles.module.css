@@ -2,7 +2,6 @@
   display: flex;
   grid-area: mainWeather;
   border-radius: var(--rounded-lg);
-  height: 100%;
   padding: 2rem;
 }
 
